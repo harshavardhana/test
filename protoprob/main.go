@@ -3,9 +3,10 @@ package main
 import (
 	"fmt"
 
-	_ "github.com/colinmarc/hdfs/v2"
+	"github.com/colinmarc/hdfs/v2"
 )
 
 func main() {
+	_, _ = hdfs.New("")
 	fmt.Println("Initialized ok")
 }
