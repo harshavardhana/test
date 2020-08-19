@@ -2,13 +2,13 @@ language: go
 
 os:
   - linux
-  - osx
-  - windows
+#  - osx
+#  - windows
 
 arch:
   - amd64
-  - arm64
-  - ppc64le
+#  - arm64
+#  - ppc64le
   - s390x
 
 go:
@@ -21,3 +21,11 @@ jobs:
   allow_failures:
     - go: 'master'
   fast_finish: true
+
+script:
+  - go test -v ./...
+  - go test -race ./...
+  - go test -v ./...
+  - go test -v ./...
+  - go test -v ./...
+  - go test -v ./...
